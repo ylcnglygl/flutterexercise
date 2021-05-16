@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:soccer/player_container.dart';
 
 class StadiumScreen extends StatelessWidget {
   @override
@@ -10,6 +11,51 @@ class StadiumScreen extends StatelessWidget {
           rectangleBorderMethod(context),
           middleLineContainerMethod(context),
           middleCircleContainerMethod(context),
+          defensePlayersMethod(),
+          middlePlayersMethod(),
+          Padding(
+            padding: const EdgeInsets.only(top: 200),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                PlayerContainer("LS", "7"),
+                PlayerContainer("RS", "9"),
+              ],
+            ),
+          )
+        ],
+      ),
+    );
+  }
+
+  Padding middlePlayersMethod() {
+    return Padding(
+      padding: const EdgeInsets.only(top: 400),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          PlayerContainer("LM", "34"),
+          PlayerContainer("LCM", "8"),
+          PlayerContainer("RCM", "32"),
+          PlayerContainer("RM", "14"),
+        ],
+      ),
+    );
+  }
+
+  Padding defensePlayersMethod() {
+    return Padding(
+      padding: const EdgeInsets.only(top: 600),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          PlayerContainer("LB", "3"),
+          PlayerContainer("LCB", "22"),
+          PlayerContainer("RCB", "16"),
+          PlayerContainer("RB", "2"),
         ],
       ),
     );
@@ -22,7 +68,7 @@ class StadiumScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
-            height: 100.0,
+            height: 110.0,
             width: MediaQuery.of(context).size.width,
             decoration: BoxDecoration(
                 shape: BoxShape.circle,
@@ -67,7 +113,22 @@ class StadiumScreen extends StatelessWidget {
         ),
         Padding(
           padding:
-              const EdgeInsets.only(left: 150.0, right: 150.0, bottom: 115.0),
+              const EdgeInsets.only(left: 155.0, right: 145.0, bottom: 115.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Container(
+                height: MediaQuery.of(context).size.height * 1 / 16,
+                width: MediaQuery.of(context).size.width * 2 / 8,
+                decoration: BoxDecoration(
+                    border: Border.all(color: Colors.white, width: 2.0)),
+              ),
+            ],
+          ),
+        ),
+        Padding(
+          padding:
+              const EdgeInsets.only(left: 155.0, right: 145.0, bottom: 699.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
