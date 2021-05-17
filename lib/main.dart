@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:soccer/text_button_example.dart';
 import 'package:soccer/stadium_screen.dart';
 
 void main() => runApp(MyApp());
@@ -9,7 +10,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: StadiumScreen(),
+        body: TextButtonExample(),
+        backgroundColor: Colors.grey[300],
       ),
     );
   }

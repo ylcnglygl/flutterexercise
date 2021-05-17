@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class PlayerContainer extends StatelessWidget {
   String name;
   String number;
+  // ignore: use_key_in_widget_constructors
   PlayerContainer(this.name, this.number);
 
   @override
@@ -10,8 +12,8 @@ class PlayerContainer extends StatelessWidget {
     return Column(
       children: [
         Container(
-          height: 24.0,
-          width: 24.0,
+          height: 32.0,
+          width: 32.0,
           decoration: const BoxDecoration(
             color: Color(0xff36B585),
             shape: BoxShape.circle,
@@ -41,3 +43,6 @@ class PlayerContainer extends StatelessWidget {
     );
   }
 }
+
+
+
